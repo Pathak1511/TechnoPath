@@ -36,7 +36,7 @@ gaming = (req, res, next) => {
 // router.get('/laptop', viewsCont.getLaptops);
 
 // HOME ROUTE
-router.get('/Home', viewsCont.getHome);
+router.get('/', viewsCont.getHome);
 
 // LAPTOP ROUTE
 router.get('/profession', profession, viewsCont.getLaptops);
