@@ -1,5 +1,6 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+var http = require('http');
 
 process.on('uncaughtException', (err) => {
   console.log(err.name, err.message);
@@ -29,8 +30,12 @@ mongoose
 
 // const port = 5500 || process.env.PORT;
 
+var server = http.createServer((req, res) => {
+  //your stuff
+});
+
 //${port} in ${process.env.NODE_ENV}
-const server = app.listen(process.env.PORT, () => {
+server.listen(process.env.PORT || 5500, () => {
   // console.log('App running on port ');
 });
 
