@@ -1,0 +1,78 @@
+header.header
+  .menu
+    h1.title
+      | Top&nbsp;
+      span.span 10
+    nav.nav
+      .nav-btw-space
+        ul.list.upper-list
+          li.list-main
+            a(href='/') Home
+          li.laptop.list-main
+            a(href='#') Laptop
+          // ------------------------ DropDown ------------------
+          .laptop-dropdown
+            .dropdown-list
+              ul.list-2
+                li
+                  a(href='/profession')
+                    | Professional
+                    //- ion-icon(name='logo-apple')
+                hr
+                li
+                  a(href='/programming' )
+                    | Programming 
+                    //- ion-icon(name='logo-windows' style='color: #0078d7')
+                hr
+                li
+                  a(href='/gaming' ) Gaming
+              .square
+          li.mobile.list-main
+            a(href='#') Mobile
+          .mobile-dropdown
+            .dropdown-list
+              ul.list-2
+                li
+                  a(href='/flagship')
+                    | Flagship 
+                    //- ion-icon(name='logo-android' style='color: #3ddc84')
+                hr
+                li
+                  a(href='/midrange')
+                    | Mid-Range
+                    //- ion-icon(name='logo-apple')
+                hr
+                li
+                  a(href='/affordable') Affordable
+              .square-1
+          li.list-main
+            a(href='/other') Others  
+          li.list-main
+            a(href='/pop') About 
+      .contact
+        ion-icon.contact-Icon(name='person')
+        .contact-us
+          h3 Admin
+        ion-icon.contact-Icon.btnContact(name='call' type='button')
+        .contact-us
+          h3 Contact us
+          h3 9870786521
+  //
+    <div class="contact">
+    <ion-icon name="person" class="contact-Icon"></ion-icon>
+    <div class="contact-us">
+    <h3>Admin</h3>
+    </div>
+    <ion-icon
+    name="call"
+    class="contact-Icon btnContact"
+    type="button"
+    ></ion-icon>
+    <div class="contact-us">
+    <h3>Contact us</h3>
+    <h3>9870786521</h3>
+    </div>
+    </div>
+  .Icon-menu
+    ion-icon.openMenu(name='menu' type='button')
+    ion-icon.closeMenu(name='close' type='button')

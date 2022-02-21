@@ -1,0 +1,84 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap' rel='stylesheet')
+  //-------------- ICONS PACKAGE ----------------------------------
+  //- link(href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet')
+  //------------ CDNJS OWL CAROUSEL CSS FILES  ---------------------
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' integrity='sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css' integrity='sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  //----------------------  CUSTOM CSS  ----------------------------
+  link(href='/CSS/style.css' rel='stylesheet')
+  link(href='/CSS/query.css' rel='stylesheet')
+  title=title
+  body 
+    //-HEADER
+    include _header
+
+    //-CONTENT
+    block content
+
+    section.contactModal
+      .modal-section
+        .modal
+          ion-icon.close-btn(name='close')
+          .modal-left
+            .address
+              li
+                ion-icon.modal-icons(name='location')
+              h2.location Lorem, Ipsum
+              h2.location Loreamupsum 33333
+            .phone
+              li
+                ion-icon.modal-icons(name='call')
+              h2 Phone
+              li + 00880080088
+              li + 00880080088
+            .email
+              li
+                ion-icon.modal-icons(name='mail')
+              h2 hritik1511@gmail.com
+              h2 patilkarthik2122@gmail.com
+          hr
+          .modal-right
+            h2.message-heading Send us a message
+            p.message-para
+              | If you have any query or any issue feel free to send us a message.
+              | It&apos;s my pleasure to help you !!!
+            .text-email
+              h3 Enter your email
+              input(type='text' placeholder='Email')
+            .text-name
+              h3 Enter your Name
+              input(type='text' placeholder='Sender Name')
+            .text-message
+              textarea(placeholder='Enter Your Message')
+              button.btn-2
+                | Send Now&nbsp;&nbsp;
+                ion-icon.btn-icon(name='send')
+
+      
+
+    //-FOOTER
+    include _footer
+
+    //-JAVASCRIPT FILES
+    //-------------------- JS JQUERY CDNJS ---------------------------------
+    script(nonce='adapada' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous' referrerpolicy='no-referrer')
+    script(nonce='adapada' src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' integrity='sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==' crossorigin='anonymous' referrerpolicy='no-referrer')
+    script(src='/JS/script.js')
+    //-------------------- CUSTOM JSS & ONLINE JS FILES------------------
+    script(src='/JS/main.js')
+    script(nonce='popojk' type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js' integrity='sha384-EcogLzNzScolFpuLPk/kxJRnmu39K6J1j3+8yrfrebDq7qtbZoB2gfP0rD08JKit' crossorigin='anonymous')
+
+        
+        
+    
+

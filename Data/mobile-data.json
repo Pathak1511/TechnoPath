@@ -1,0 +1,102 @@
+[
+  {
+    "subtype": "affordable",
+    "name": "Apple max",
+    "image": "./Img/Redmi2.jpg",
+    "price": 55990,
+    "battery": "5000",
+    "display": "Amoled",
+    "camera": "64 mega pixel",
+    "ram": "8",
+    "rom": "128",
+    "size": "6",
+    "amz": "",
+    "flipkart": "",
+    "pros": ["light weight", "Natural silver", "Better movie Quality"],
+    "cons": [
+      "Sound quality is good",
+      "Not for programming",
+      "front Camera is not that much good"
+    ]
+  },
+  {
+    "subtype": "Flagship",
+    "name": "Apple max Pro",
+    "image": "./Img/Redmi2.jpg",
+    "price": 80500,
+    "battery": "5000",
+    "display": "Amoled",
+    "camera": "64 mega pixel",
+    "ram": "6",
+    "rom": "128",
+    "size": "6.3",
+    "amz": "",
+    "flipkart": "",
+    "pros": ["light weight", "Natural silver", "Better movie Quality"],
+    "cons": [
+      "Sound quality is good",
+      "Not for programming",
+      "front Camera is not that much good"
+    ]
+  },
+  {
+    "subtype": "affordable",
+    "name": "Vivo Pro",
+    "image": "./Img/Redmi2.jpg",
+    "price": 28500,
+    "battery": "5000",
+    "display": "Amoled",
+    "camera": "64 mega pixel",
+    "ram": "6",
+    "rom": "128",
+    "size": "5.4",
+    "amz": "",
+    "flipkart": "",
+    "pros": ["light weight", "Natural silver", "Better movie Quality"],
+    "cons": [
+      "Sound quality is good",
+      "Not for programming",
+      "front Camera is not that much good"
+    ]
+  },
+  {
+    "subtype": "Flagship",
+    "name": "Samsun F41",
+    "image": "./Img/Redmi2.jpg",
+    "price": 15500,
+    "battery": "5000",
+    "display": "Amoled",
+    "camera": "64 mega pixel",
+    "ram": "6",
+    "rom": "128",
+    "size": "5.4",
+    "amz": "",
+    "flipkart": "",
+    "pros": ["light weight", "Natural silver", "Better movie Quality"],
+    "cons": [
+      "Sound quality is good",
+      "Not for programming",
+      "front Camera is not that much good"
+    ]
+  },
+  {
+    "subtype": "midrange",
+    "name": "MI ultra",
+    "image": "./Img/Redmi2.jpg",
+    "price": 25500,
+    "battery": "5000",
+    "display": "Amoled",
+    "camera": "64 mega pixel",
+    "ram": "6",
+    "rom": "128",
+    "size": "6.2",
+    "amz": "",
+    "flipkart": "",
+    "pros": ["light weight", "Natural silver", "Better movie Quality"],
+    "cons": [
+      "Sound quality is good",
+      "Not for programming",
+      "front Camera is not that much good"
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "name": "top-10",
+  "version": "1.0.0",
+  "description": "weekly latest top 10 app project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "start:prod": "SET NODE_ENV=production && nodemon server.js",
+    "debug": "ndb server.js"
+  },
+  "author": "Hritik Pathak",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-icons": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.3",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.1.0",
+    "helmet": "^5.0.1",
+    "hpp": "^0.2.3",
+    "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "slugify": "^1.6.5",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "ndb": "^1.1.5",
+    "nodemon": "^2.0.15"
+  },
+  "engine": {
+    "node": ">=10.0.0"
+  }
+}

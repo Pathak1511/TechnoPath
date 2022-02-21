@@ -1,0 +1,69 @@
+extends base 
+
+block content 
+  //----------------------  MAIN HOME CONTAINER  ----------------------------
+  section.hero
+    .hero-container
+      .laptop-container
+        // laptop-container
+        each product in laptop
+          .hero-right
+            .hero-up
+              .img-box
+                img.product-img(src=`${product.image}` crossorigin='anonymous')
+                h2.product-name=product.name
+                ul.product-list
+                  li=product.processor
+                  li=`${product.ram} GB RAM / ${product.rom} GB ${product.romtypes}` 
+                  li=`Price : ${product.price} Rs`
+                .buttons
+                  a.amz-btn.btn(href=`${product.amz}`) Amazon
+                  a.fk-btn.btn(href=`${product.flipkart}`) Flipkart
+              .product-left
+                .product-details
+                  h2.product-name.name2=product.name
+                  ul
+                    li=`Best for ${product.best}` 
+                    li=product.processor
+                    li=`${product.ram} GB RAM / ${product.rom} GB ${product.romtypes}`
+                    li=product.os
+                    li=`Size  ${product.size}" inch` 
+                .prosAndcons
+                  .pros
+                    h3.product-pros-heading PROS
+                    ul
+                      li
+                        ion-icon.pros-icon(name='checkmark-done')
+                        | &nbsp;
+                        =product.pros[0]
+                      li
+                        ion-icon.pros-icon(name='checkmark-done')
+                        | &nbsp;
+                        =product.pros[1]
+                      li
+                        ion-icon.pros-icon(name='checkmark-done')
+                        | &nbsp;
+                        =product.pros[2]
+                  .cons
+                    h3.product-cons-heading CONS
+                    ul
+                      li
+                        ion-icon.cons-icon(name='close')
+                        |
+                        =product.cons[0]
+                      li
+                        ion-icon.cons-icon(name='close')
+                        | &nbsp;
+                        =product.cons[1]
+                      li
+                        ion-icon.cons-icon(name='close')
+                        | &nbsp;
+                        =product.cons[2]
+        // laptop-container
+      .hero-left
+        .left-container
+          img.img-ads(src='./Img/Ad-00.jpg')
+  // ---------------------- MODAL CONTAINER  ----------------------------
+  
+
+  

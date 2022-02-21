@@ -1,0 +1,15 @@
+extends base
+
+block content 
+  .errors
+    .error-container
+      h1.error-status=statusCode
+      p2.error-statement Oops ...Error Occured &#x1F623;
+      p2.error-statement2=message
+      .button
+        a.btn.btn-home(href='/') Home
+        button.btn.btn-back Go Back
+  script(src='/JS/error.js')        
+
+
+ 
