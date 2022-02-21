@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-var http = require('http');
+// var http = require('http');
 
 process.on('uncaughtException', (err) => {
   console.log(err.name, err.message);
@@ -22,22 +22,20 @@ const DB = process.env.DATABASE.replace(
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    // useCreateIndex: true,
+    // useFindAndModify: false,
     useUnifiedTopology: true,
   })
   .then(() => console.log('DB connection successfull'));
 
 // const port = 5500 || process.env.PORT;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
-
-var server = http.createServer((req, res) => {
-  //your stuff
-});
+// var server = http.createServer((req, res) => {
+//   //your stuff
+// });
 
 //${port} in ${process.env.NODE_ENV}
-server.listen(process.env.PORT || 5500, server_host, () => {
-  // console.log('App running on port ');
+const server = app.listen(process.env.PORT || 5500, () => {
+  console.log('App running on port ');
 });
 
 process.on('unhandledRejection', (err) => {
