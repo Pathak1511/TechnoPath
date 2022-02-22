@@ -528,7 +528,7 @@
 /*before 22rem */
 @media (max-width: 23em) and (min-width: 16em) {
   html {
-    font-size: 50%;
+    font-size: 52%;
   }
   .item {
     padding: 1rem;
