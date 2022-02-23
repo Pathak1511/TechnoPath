@@ -115,11 +115,14 @@
   html {
     font-size: 50%;
   }
-  /* .offers-grid {
-    padding: 3.6rem;
-    grid-template-columns: repeat(2, 1fr);
-  } */
-
+  .square-1,
+  .square {
+    left: -1.9rem;
+    top: -0.6rem;
+  }
+  .list2 li a {
+    font-size: 1.6rem;
+  }
   .cards-list {
     font-size: 1.8rem;
     font-weight: 400;
@@ -204,11 +207,11 @@
   }
   .laptop-dropdown {
     top: 8rem;
-    left: 75%;
+    left: 78%;
   }
   .mobile-dropdown {
-    top: 14rem;
-    left: 75%;
+    top: 15rem;
+    left: 80%;
   }
   .contact {
     padding-bottom: 4rem;
@@ -350,10 +353,12 @@
   .contact {
     flex-direction: column;
   }
-  /* .offer-container {
-    display: none;
-  } */
-
+  .laptop-dropdown {
+    top: 6rem;
+  }
+  .mobile-dropdown {
+    top: 11rem;
+  }
   .newsletter,
   .footer-1 {
     flex-direction: column;
@@ -529,6 +534,9 @@
 @media (max-width: 23em) and (min-width: 16em) {
   html {
     font-size: 52%;
+  }
+  .list2 li a {
+    font-size: 1.6rem;
   }
   .item {
     padding: 1rem;
