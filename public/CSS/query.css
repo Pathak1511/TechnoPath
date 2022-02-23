@@ -219,9 +219,9 @@
   .list {
     flex-direction: column;
   }
-  .upper-list {
+  /* .upper-list {
     margin-top: 6.4rem;
-  }
+  } */
   .select {
     transform: translateY(0);
     opacity: 1;
