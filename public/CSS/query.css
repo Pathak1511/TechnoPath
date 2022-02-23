@@ -199,6 +199,9 @@
   .nav li a {
     color: #222;
   }
+  .nav .last a {
+    color: #cdd2de;
+  }
 
   .nav-btw-space {
     display: flex;
@@ -212,9 +215,6 @@
   .mobile-dropdown {
     top: 15rem;
     left: 80%;
-  }
-  .contact {
-    padding-bottom: 4rem;
   }
   .list {
     flex-direction: column;
@@ -350,9 +350,9 @@
   .hero-up {
     flex-direction: column;
   }
-  .contact {
+  /* .contact {
     flex-direction: column;
-  }
+  } */
   .laptop-dropdown {
     top: 6rem;
   }

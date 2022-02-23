@@ -27,14 +27,14 @@ btnCloseMenu.addEventListener('click', function () {
   btnMenu.style.display = 'block';
 });
 // JS CODE TO TOGGLE CONTACT MODAL DROPDOWN
-const contact = document.querySelector('.btnContact');
-const modalContact = document.querySelector('.modal-section');
-const closeBtn = document.querySelector('.close-btn');
+// const contact = document.querySelector('.btnContact');
+// const modalContact = document.querySelector('.modal-section');
+// const closeBtn = document.querySelector('.close-btn');
 
-contact.addEventListener('click', function () {
-  modalContact.classList.toggle('select');
-});
+// contact.addEventListener('click', function () {
+//   modalContact.classList.toggle('select');
+// });
 
-closeBtn.addEventListener('click', function () {
-  modalContact.classList.remove('select');
-});
+// closeBtn.addEventListener('click', function () {
+//   modalContact.classList.remove('select');
+// });

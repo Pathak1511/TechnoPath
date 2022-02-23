@@ -5,30 +5,34 @@ section.footer
         h2.web-text Websites
         ul.footer-list
           li
-            a(href='#') Home
+            a(href='/') Home
           li
-            a(href='#') Laptop
+            a(href='/programming') Laptop
           li
-            a(href='#') Mobile
-          // <li><a href="#">Others</a></li>
+            a(href='/affordable') Mobile
           li
-            a(href='#') Offers
+            a(href='/other') Other
           li
-            a(href='#') About
+            a(href='/pop') About
       .subscribe
         h2.web-text Subscribe
         button.btnSubs Subscribe
-      .newsletter
-        h2.web-text NewsLetter
-        .email-footer
-          input(type='email' placeholder='Email')
-          ion-icon.footer-send-Icon(name='send')
+      .contact
+        .contact-us
+          h2.web-text.text2 Email
+        a(href='mailto:hritikpathak888@gmail.com')
+          ion-icon.contact-Icon(name='mail')
+      .contact
+        div
+          h2.web-text.text2 Contact us
+        a( href='tel:9561964641')
+          ion-icon.contact-Icon(name='call' type='button')
     hr
     .footer-3
       h2.company-name
         | Top 
-        span.span 10
+        span.span gadgets
       p.footer-text
-        | All Rights Reserved ; &copy; Copyrights 2022 || Top
-        span.span 10
+        | All Rights Reserved ; &copy; Copyrights 2022 || 
+        span.span  topgadgets
         |  Teams
