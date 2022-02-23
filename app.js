@@ -57,7 +57,7 @@ app.use(
 app.use(function (req, res, next) {
   res.setHeader(
     'Content-Security-Policy',
-    "script-src 'self' 'nonce-adapada' https://cdnjs.cloudflare.com 'nonce-popojk' https://unpkg.com",
+    "script-src 'self'  'nonce-popojk' https://unpkg.com",
     "style-src 'self' 'https://www.amazon.in/'"
   );
   return next();
