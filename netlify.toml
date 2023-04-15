@@ -8,17 +8,10 @@
   to = "https://friendly-selkie-e086b0.netlify.app/.netlify/functions/:solat"
   status = 200
   force = true
-  headers = {X-From = "Netlify"}
   
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
-  headers = {X-From = "Netlify"}
-  
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Security-Policy = "frame-ancestors 'none'"
 
