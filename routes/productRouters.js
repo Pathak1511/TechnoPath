@@ -1,6 +1,7 @@
 const express = require('express');
 const productCont = require('../controllers/productControllers');
-const ViewCont = require('../controllers/viewsController');
+const authController = require('../controllers/authController');
+
 const router = express.Router();
 
 // REQUIRED MODULES

@@ -66,9 +66,10 @@ exports.getProduct = catchAsync(async (req, res, next) => {
   } else {
     query = query.select('');
   }
+
   //PAGINATION
   const page = req.query.page * 1 || 1;
-  const limit = req.query.limiy * 1 || 10;
+  const limit = req.query.limit * 1 || 10;
   const skip = (page - 1) * limit;
 
   query = query.skip(skip).limit(limit);

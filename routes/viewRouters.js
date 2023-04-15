@@ -1,5 +1,6 @@
 const express = require('express');
 const viewsCont = require('../controllers/viewsController');
+const authController = require('../controllers/authController');
 
 const router = express.Router();
 
@@ -39,7 +40,12 @@ gaming = (req, res, next) => {
 router.get('/', viewsCont.getHome);
 
 // LAPTOP ROUTE
-router.get('/profession', profession, viewsCont.getLaptops);
+router.get(
+  '/profession',
+  authController.protect,
+  profession,
+  viewsCont.getLaptops
+);
 router.get('/programming', programming, viewsCont.getLaptops);
 router.get('/gaming', gaming, viewsCont.getLaptops);
 

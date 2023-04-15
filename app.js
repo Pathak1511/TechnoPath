@@ -5,6 +5,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const morgan = require('morgan');
 const productRouter = require('./routes/productRouters');
+const userRouter = require('./routes/userRoutes');
 const viewRouter = require('./routes/viewRouters');
 const AppError = require('./utils/newAppError');
 const GlobalErrorController = require('./controllers/errorController');
@@ -12,6 +13,7 @@ const helmet = require('helmet');
 const hpp = require('hpp');
 const app = express();
 const cors = require('cors');
+const serverless = require('serverless-http');
 // REQUIRED MODULES
 //////////////////////////////////////////
 
@@ -70,6 +72,8 @@ app.use('/', viewRouter);
 if (process.env.NODE_ENV === 'development') {
   app.use('/api/products', productRouter);
 }
+// app.use('/api/products', productRouter);
+app.use('/user', userRouter);
 // app.use('/api/products', function (req, res, next) {
 //   res.status(err.status).render('error', {
 //     title: 'Error 404',
@@ -83,10 +87,11 @@ app.all('*', function (req, res, next) {
   // res.status(404).sendFile('public/error.html', { root: __dirname });
   const err = new AppError(`Can't find ${req.originalUrl} in this server!`);
   err.status = 'fail';
-  err.statusCode = 404;
+  err.statusCode = error.statusCode;
   next(err);
 });
 
 app.use(GlobalErrorController);
 
 module.exports = app;
+module.exports.handler = serverless(app);
