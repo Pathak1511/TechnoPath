@@ -4,26 +4,21 @@
   functions = "functions/"
 
 [[redirects]]
-  from = "/api/*"
-  to = "http://localhost:5000/api/:splat"
+  from = "/.netlify/functions/:solat"
+  to = "https://friendly-selkie-e086b0.netlify.app/.netlify/functions/:solat"
   status = 200
   force = true
-
+  headers = {X-From = "Netlify"}
+  
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
-  conditions = {Path=="/"}
+  headers = {X-From = "Netlify"}
   
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
+    X-Content-Security-Policy = "frame-ancestors 'none'"
 
-[[redirects]]
-  from = "/.netlify/functions/*"
-  to = "https://friendly-selkie-e086b0.netlify.app/.netlify/functions/:splat"
-  status = 200
