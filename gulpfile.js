@@ -13,10 +13,19 @@ gulp.task('assets', function () {
   return gulp.src('public/Img/**/*').pipe(gulp.dest('dist/Img'));
 });
 
-gulp.task('pug', function buildHTML() {
+gulp.task('pug', function () {
   return gulp
     .src('./views/**/*.pug')
-    .pipe(pug({ pretty: false }))
+    .pipe(
+      pug({
+        pretty: false,
+        locals: {
+          includeFunc: function (path) {
+            return pug.renderFile(path, { pretty: true });
+          },
+        },
+      })
+    )
     .pipe(gulp.dest('dist'));
 });
 
