@@ -3,8 +3,8 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/api/*"
-  to = "http://localhost:5500/api/:splat"
+  from = "/*"
+  to = "http://localhost:3000/:splat"
   status = 200
   force = true
 
