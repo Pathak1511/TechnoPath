@@ -7,6 +7,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
+const pug = require('gulp-pug');
+
+gulp.task('pug', function () {
+  return gulp.src('./views/**/*.pug').pipe(pug()).pipe(gulp.dest('dist'));
+});
 
 // Compile Sass
 gulp.task('css', function () {
@@ -35,4 +40,4 @@ gulp.task('scripts', function () {
 // });
 
 // Default task
-gulp.task('default', gulp.parallel('css', 'scripts'));
+gulp.task('default', gulp.parallel('css', 'scripts', 'pug'));
