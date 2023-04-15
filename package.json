@@ -8,8 +8,7 @@
     "dev": "nodemon server.js",
     "prod": "SET NODE_ENV=production && nodemon server.js",
     "debug": "ndb server.js",
-    "build": "gulp build && npm run build:server",
-    "build:server": "tsc"
+    "build": "gulp build"
   },
   "author": "Hritik Pathak",
   "license": "ISC",
