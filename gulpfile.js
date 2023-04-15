@@ -37,10 +37,5 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('dist/js'));
 });
 
-// Watch files for changes
-// gulp.task('watch', function () {
-//   gulp.watch('public/CSS/**/*.css', gulp.series('css'));
-//   gulp.watch('public/JS/**/*.js', gulp.series('scripts'));
-// });
 // Default task
-gulp.task('default', gulp.parallel('css', 'scripts', 'pug'));
+gulp.task('build', gulp.parallel('css', 'scripts', 'pug'));
