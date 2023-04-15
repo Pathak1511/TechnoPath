@@ -41,12 +41,7 @@ gulp.task('css', function () {
 
 // Concatenate and minify JavaScript
 gulp.task('scripts', function () {
-  return gulp
-    .src('public/JS/**/*.js')
-    .pipe(concat('app.js'))
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/js'));
+  return gulp.src('public/JS/**/*.js').pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('build', gulp.parallel('assets', 'css', 'scripts', 'pug'));
