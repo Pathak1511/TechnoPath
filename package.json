@@ -4,11 +4,11 @@
   "description": "weekly latest top 10 app project",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "start": "./node_modules/.bin/netlify-lambda serve public",
     "dev": "nodemon server.js",
     "prod": "SET NODE_ENV=production && nodemon server.js",
     "debug": "ndb server.js",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "build": "./node_modules/.bin/netlify-lambda build public"
   },
   "author": "Hritik Pathak",
   "license": "ISC",
