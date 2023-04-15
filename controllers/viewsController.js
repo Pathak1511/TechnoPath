@@ -3,11 +3,13 @@ const product = require('../DataModel/productModel');
 const mobile = require('../DataModel/mobileModel');
 const other = require('../DataModel/otherModel');
 const catchAsync = require('../utils/catchAsync');
+const pug = require('pug');
 
 exports.getHome = catchAsync(async (req, res, next) => {
-  res.status(200).render('home', {
+  const html = pug.renderFile('views/home.pug', {
     title: 'Home',
   });
+  res.status(200).send(html);
 });
 
 exports.getother = catchAsync(async (req, res, next) => {
