@@ -10,7 +10,10 @@ const rename = require('gulp-rename');
 const pug = require('gulp-pug');
 
 gulp.task('pug', function () {
-  return gulp.src('./views/**/*.pug').pipe(pug()).pipe(gulp.dest('dist'));
+  return gulp
+    .src('./views/**/*.pug')
+    .pipe(pug({ pretty: false }))
+    .pipe(gulp.dest('dist'));
 });
 
 // Compile Sass
