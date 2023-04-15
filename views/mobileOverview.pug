@@ -1,22 +1,24 @@
 extends base
+
 block content
   section.mobile-Container-list
     h2.mobile-heading Mobiles
     .mobile-list
       .mobile-list-sub
-        each product in Mobile
-          .hero-right.mob-cont
-            .hero-up
-              .img-box
-                img.product-img.mob(src=`${product.image}`)
-                h2.product-name=product.name
-                ul.product-list
-                  li=product.camera
-                  li=`${product.rom} GB ROM / ${product.ram} GB RAM`
-                  li=`Price ${product.price} Rs` 
-                .buttons
-                  a.amz-btn.btn(href=`${product.amz}` target='blank') Amazon
-                  a.fk-btn.btn(href=`${product.flipkart}`) Flipkart
+        if Mobile && Mobile.length
+          each product in Mobile
+            .hero-right.mob-cont
+              .hero-up
+                .img-box
+                  img.product-img.mob(src=`${product.image}`)
+                  h2.product-name=product.name
+                  ul.product-list
+                    li=product.camera
+                    li=`${product.rom} GB ROM / ${product.ram} GB RAM`
+                    li=`Price ${product.price} Rs` 
+                  .buttons
+                    a.amz-btn.btn(href=`${product.amz}` target='blank') Amazon
+                    a.fk-btn.btn(href=`${product.flipkart}`) Flipkart
               .product-left
                 .product-details
                   h2.product-name.name2=product.name
@@ -57,4 +59,5 @@ block content
                         ion-icon.cons-icon(name='close')
                         | &nbsp;
                         =product.cons[2]
-          
+        else
+          p No mobile data available.

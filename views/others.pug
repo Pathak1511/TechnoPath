@@ -9,20 +9,19 @@ block content
         span.span
           ion-icon(name='headset')
       .offers-grid.offer-cont
-        each other in Other
+        each other in Other || []
           .item
             .cards2
-              img.cards-img(src=`${other.image}`)
+              img.cards-img(src=`${other.image || ''}`)
               .cards-details
-                h2.cards-product-name=other.name
+                h2.cards-product-name=other.name || 'Product Name'
                 .cards-list
                   ul.list-22
-                    li=`Brand : ${other.brand}`
-                    li=`Model : ${other.model}`
-                    li=`Warranty : ${other.warranty}`
-                    li=`${other.bluetooth}`
-                h3.offers-statement=`Get at Rs ${other.price} -/`
+                    li=`Brand : ${other.brand || ''}`
+                    li=`Model : ${other.model || ''}`
+                    li=`Warranty : ${other.warranty || ''}`
+                    li=`${other.bluetooth || ''}`
+                h3.offers-statement=`Get at Rs ${other.price || '0'} -/`
                 .buttons
                   a.amz-btn.btn(href='#') Amazon
                   a.fk-btn.btn(href='#') Flipkart
-        

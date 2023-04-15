@@ -8,8 +8,9 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const pug = require('gulp-pug');
+const plumber = require('gulp-plumber');
 
-gulp.task('pug', function () {
+gulp.task('pug', function buildHTML() {
   return gulp
     .src('./views/**/*.pug')
     .pipe(pug({ pretty: false }))
@@ -41,6 +42,5 @@ gulp.task('scripts', function () {
 //   gulp.watch('public/CSS/**/*.css', gulp.series('css'));
 //   gulp.watch('public/JS/**/*.js', gulp.series('scripts'));
 // });
-
 // Default task
 gulp.task('default', gulp.parallel('css', 'scripts', 'pug'));

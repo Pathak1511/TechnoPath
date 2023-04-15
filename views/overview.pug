@@ -1,12 +1,11 @@
-extends base 
+extends base
 
 block content 
-  //----------------------  MAIN HOME CONTAINER  ----------------------------
+  //- MAIN HOME CONTAINER 
   section.hero
     .hero-container
       .laptop-container
-        // laptop-container
-        each product in laptop
+        each product in laptop || []
           .hero-right
             .hero-up
               .img-box
@@ -32,38 +31,20 @@ block content
                   .pros
                     h3.product-pros-heading PROS
                     ul
-                      li
-                        ion-icon.pros-icon(name='checkmark-done')
-                        | &nbsp;
-                        =product.pros[0]
-                      li
-                        ion-icon.pros-icon(name='checkmark-done')
-                        | &nbsp;
-                        =product.pros[1]
-                      li
-                        ion-icon.pros-icon(name='checkmark-done')
-                        | &nbsp;
-                        =product.pros[2]
+                      each pro in product.pros || []
+                        li
+                          ion-icon.pros-icon(name='checkmark-done')
+                          | &nbsp;
+                          =pro
                   .cons
                     h3.product-cons-heading CONS
                     ul
-                      li
-                        ion-icon.cons-icon(name='close')
-                        |
-                        =product.cons[0]
-                      li
-                        ion-icon.cons-icon(name='close')
-                        | &nbsp;
-                        =product.cons[1]
-                      li
-                        ion-icon.cons-icon(name='close')
-                        | &nbsp;
-                        =product.cons[2]
-        // laptop-container
+                      each con in product.cons || []
+                        li
+                          ion-icon.cons-icon(name='close')
+                          | &nbsp;
+                          =con
       .hero-left
         .left-container
           img.img-ads(src='./Img/Ad-00.jpg')
   // ---------------------- MODAL CONTAINER  ----------------------------
-  
-
-  
