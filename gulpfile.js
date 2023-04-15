@@ -8,7 +8,10 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const pug = require('gulp-pug');
-const plumber = require('gulp-plumber');
+
+gulp.task('assets', function () {
+  return gulp.src('public/Img/**/*').pipe(gulp.dest('dist/Img'));
+});
 
 gulp.task('pug', function buildHTML() {
   return gulp
@@ -37,5 +40,4 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('dist/js'));
 });
 
-// Default task
-gulp.task('build', gulp.parallel('css', 'scripts', 'pug'));
+gulp.task('build', gulp.parallel('assets', 'css', 'scripts', 'pug'));
