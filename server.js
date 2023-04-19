@@ -15,10 +15,8 @@ const { type } = require('express/lib/response');
 // REQUIRED MODULES
 //////////////////////////////////////////
 
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
+const DB =
+  'mongodb+srv://hritik1511:%40Pikachu%25%2F_top10%25%40@cluster0.tkqjn.mongodb.net/myFirstDatabase';
 
 mongoose
   .connect(DB, {
@@ -29,7 +27,7 @@ mongoose
   })
   .then(() => console.log('DB connection successfull'));
 
-const server = app.listen(process.env.PORT || 5500, () => {
+const server = app.listen(5500, () => {
   console.log('App running on port ');
 });
 

@@ -20,7 +20,7 @@ const serverless = require('serverless-http');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //MIDDLEWARE STACK FOR SECURITY
 
@@ -84,11 +84,11 @@ app.use('/user', userRouter);
 // });
 
 app.all('*', function (req, res, next) {
-  // res.status(404).sendFile('public/error.html', { root: __dirname });
-  const err = new AppError(`Can't find ${req.originalUrl} in this server!`);
-  err.status = 'fail';
-  err.statusCode = error.statusCode;
-  next(err);
+  res.status(404).sendFile('public/error.html', { root: __dirname });
+  // const err = new AppError(`Can't find ${req.originalUrl} in this server!`);
+  // err.status = 'fail';
+  // err.statusCode = error.statusCode;
+  // next(err);
 });
 
 app.use(GlobalErrorController);
