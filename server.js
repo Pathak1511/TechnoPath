@@ -15,8 +15,7 @@ const { type } = require('express/lib/response');
 // REQUIRED MODULES
 //////////////////////////////////////////
 
-const DB =
-  'mongodb+srv://hritik1511:%40Pikachu%25%2F_top10%25%40@cluster0.tkqjn.mongodb.net/myFirstDatabase';
+const DB ='';
 
 mongoose
   .connect(DB, {
