@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 // var http = require('http');
-
+const PORT = 5000;
 process.on('uncaughtException', (err) => {
   console.log(err.name, err.message);
   process.exit(1);
@@ -27,7 +27,7 @@ mongoose
   })
   .then(() => console.log('DB connection successfull'));
 
-const server = app.listen(5500, () => {
+const server = app.listen(PORT || 5002, () => {
   console.log('App running on port ');
 });
 
